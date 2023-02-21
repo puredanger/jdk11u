@@ -2396,6 +2396,9 @@ define_pd_global(uint64_t,MaxRAM,                    1ULL*G);
                                                                             \
   /* Properties for Java libraries  */                                      \
                                                                             \
+  product(bool, DisableSecondarySuperCacheWrite, false,                     \
+          "Disable write to secondary super cache")                         \
+                                                                            \
   product(uint64_t, MaxDirectMemorySize, 0,                                 \
           "Maximum total size of NIO direct-buffer allocations")            \
           range(0, max_jlong)                                               \
